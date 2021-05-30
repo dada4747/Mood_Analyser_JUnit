@@ -10,6 +10,8 @@ public class MoodAnalyser {
     }
 
     public String analyseMood() {
+    try {
+
         if (message.toLowerCase().contains("sad")){
             return "SAD";
         }
@@ -21,6 +23,11 @@ public class MoodAnalyser {
 
         }else
             return "HAPPY";
-        }
+        }catch (Exception e){
+        e.printStackTrace();
+        return "";
+    }
+
+    }
 }
 
